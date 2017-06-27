@@ -5,43 +5,36 @@
 #                                                     +:+ +:+         +:+      #
 #    By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/05/21 20:39:42 by itonoli-          #+#    #+#              #
-#    Updated: 2017/06/20 23:32:37 by itonoli-         ###   ########.fr        #
+#    Created: 2017/06/26 17:44:42 by itonoli-          #+#    #+#              #
+#    Updated: 2017/06/26 20:54:03 by itonoli-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+#SELL COLORS
+LRED = \033[31m
+GREEN = \033[32m
+YELLOW = \033[33m
+BLUE = \033[34m
+LBLUE = \033[34;1m
+PINK = \033[35m
+LCYAN = \033[36m
+END = \033[0m
+
+
 #PROGRAM NAME
-NAME = fractol
+NAME = RTv1
 
 #SOURCES AND OBJECTS
 SRC_NAME = main.c \
-motion.c \
-julia.c \
-mandelbrot.c \
-burnship.c \
-newton.c \
-error.c \
-image.c \
-menu.c \
-help.c \
-init_fractal.c \
-sierpinski.c \
-rabbit.c \
-power.c \
-random.c \
-zoom.c \
-color.c \
 
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
 SRC_PATH = src/
 OBJ_PATH = obj/
-LIB_PATH = libft/includes/
 
 SRC = $(addprefix $(SRC_PATH),$(SRC_NAME))
 OBJ = $(addprefix $(OBJ_PATH),$(OBJ_NAME))
-LIB = $(addprefix -I,$(LIB_PATH))
 
 #COMPILATION
 CC = gcc
@@ -58,33 +51,35 @@ $(NAME):$(OBJ)
 		@ make -C libft/
 		@ make -C minilibx/
 		@ $(CC) $(FLAGS) $(LIBFT) $(MLX) $^ -o $@
-		@ echo "\033[32mCompilation done : Fractol is ready to be used\033[0m"
+		@ echo "$(GREEN)Compilation done : RTv1 is ready to be used$(END)"
 
 $(OBJ_PATH)%.o:$(SRC_PATH)%.c
 		@ mkdir -p $(OBJ_PATH)
-		@ $(CC) $(FLAGS) $(LIB) -o $@ -c $<
+		@ $(CC) $(FLAGS) -o $@ -c $<
 
-fdf_only:
+rtv1_only:
 		@ $(CC) $(FLAGS) -I libft/ -I./minilibx/ -c $(SRC)
 		@ $(CC) $(FLAGS) -g -o $(NAME) $(OBJ) $(LIBFT) $(MLX)
-		@ echo "\033[32mCompilation done : FDF is ready to be used\033[0m"
+		@ echo "$(GREEN)Compilation done : RTv1 is ready to be used$(END)"
 
 clean:
-		@ echo "\033[32mCleaning the following files: \033[0m"
+		@ echo "$(YELLOW)Cleaning the following files: $(END)"
 		@ make -C libft/ clean
 		@ make -C minilibx/ clean
 		@ rm -vf $(OBJ)
 		@ rm -rfv $(OBJ_PATH)
-		@ echo "\033[32mThe cleaning is done my friend!\033[0m"
+		@ echo "$(PINK)The cleaning is done my friend!$(END)"
 
 fclean: clean
 		@ rm -vf $(NAME)
 		@ make -C libft/ fclean
 		@ make -C minilibx/ fclean
-		@ echo "\033[32mThe cleaning is done my friend!\033[0m"
+		@ echo "$(PINK)The cleaning is done my friend!$(END)"
 
 norm:
-		@ echo "\033[34;1mNorminette...\033[0m"
+		@ echo "$(LBLUE)Norminette...$(END)"
 		@ norminette src inc
 
-re: fclean all
+re: 	fclean all
+
+.PHONY: fclean all clean norm rtv1_only
