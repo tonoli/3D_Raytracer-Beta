@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/26 19:17:50 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/06/27 00:08:42 by itonoli-         ###   ########.fr       */
+/*   Created: 2017/06/26 23:21:45 by itonoli-          #+#    #+#             */
+/*   Updated: 2017/06/27 00:00:59 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/rt.h"
 
-int		main(int ac, char **av)
+int		kill_program(void)
 {
-	t_env	*e;
+	exit(0);
+	return (0);
+}
 
-	if (!(e = (t_env *)malloc(sizeof(t_env))))
-		return (ft_error(1));
-	if (ac != 2)
-		ft_error(0);
-	init(&e);
-	fractal_init(e.fractal_nbr, &e);
-	fill_img(&e);
-	mlx_hook(e.win, 6, (1L << 6), mouse_move, &e);
-	mlx_hook(e.win, 17, (1L << 17), &kill_program, &e);
-	mlx_key_hook(e.win, key_hook, &e);
-	mlx_mouse_hook(e.win, mouse_hook, &e);
-	mlx_loop(e.mlx);
+void	ft_error(int i)
+{
+	if (i == 0)
+		ft_puterror("Usage : ./rtv1 <scene>");
+	else if (i == 1)
+		ft_puterror("error: Dynamic memory allocation failed.");
+	else if (i == 2)
+		ft_puterror("error: The imput file is not valid.");
 }

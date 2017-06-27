@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/26 19:17:50 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/06/27 00:08:42 by itonoli-         ###   ########.fr       */
+/*   Created: 2017/06/26 23:27:55 by itonoli-          #+#    #+#             */
+/*   Updated: 2017/06/27 00:02:54 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/rt.h"
 
-int		main(int ac, char **av)
+void	init(t_env *e)
 {
-	t_env	*e;
-
-	if (!(e = (t_env *)malloc(sizeof(t_env))))
-		return (ft_error(1));
-	if (ac != 2)
-		ft_error(0);
-	init(&e);
-	fractal_init(e.fractal_nbr, &e);
-	fill_img(&e);
-	mlx_hook(e.win, 6, (1L << 6), mouse_move, &e);
-	mlx_hook(e.win, 17, (1L << 17), &kill_program, &e);
-	mlx_key_hook(e.win, key_hook, &e);
-	mlx_mouse_hook(e.win, mouse_hook, &e);
-	mlx_loop(e.mlx);
+	e->mlx = mlx_init();
+	init_val(*e);
+	e->win = mlx_new_win(e->mlx, -1, -1, WIN_W, WIN_H, WIN_NAME);
+	e->img = mlx_new_img(e->mlx, WIN_W, WIN_H, BLACK);
+	e->img_data = (int *)mlx_get_data_addr(e->img, &e->bpp, &e->size_line, &e->endian);
 }

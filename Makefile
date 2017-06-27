@@ -6,7 +6,7 @@
 #    By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/26 17:44:42 by itonoli-          #+#    #+#              #
-#    Updated: 2017/06/26 20:54:03 by itonoli-         ###   ########.fr        #
+#    Updated: 2017/06/26 22:25:23 by itonoli-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ END = \033[0m
 
 
 #PROGRAM NAME
-NAME = RTv1
+NAME = rtv1
 
 #SOURCES AND OBJECTS
 SRC_NAME = main.c \
@@ -66,12 +66,12 @@ clean:
 		@ echo "$(YELLOW)Cleaning the following files: $(END)"
 		@ make -C libft/ clean
 		@ make -C minilibx/ clean
-		@ rm -vf $(OBJ)
+		  rm -vf $(OBJ)
 		@ rm -rfv $(OBJ_PATH)
 		@ echo "$(PINK)The cleaning is done my friend!$(END)"
 
 fclean: clean
-		@ rm -vf $(NAME)
+		  rm -vf $(NAME)
 		@ make -C libft/ fclean
 		@ make -C minilibx/ fclean
 		@ echo "$(PINK)The cleaning is done my friend!$(END)"
