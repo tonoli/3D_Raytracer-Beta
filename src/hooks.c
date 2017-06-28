@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   hooks.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/26 23:21:45 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/06/27 15:01:21 by itonoli-         ###   ########.fr       */
+/*   Created: 2017/06/27 15:01:51 by itonoli-          #+#    #+#             */
+/*   Updated: 2017/06/27 15:12:06 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/rt.h"
 
-int		kill_program(void)
+int			key_hook(int key, t_env *env)
 {
-	exit(0);
+	(void)key;
+	(void)env;
 	return (0);
 }
 
-int		ft_error(int i)
+int			mouse_hook(int button, int x, int y, t_env *e)
 {
-	if (i == 0)
-		ft_puterror("Usage : ./rtv1 <scene>");
-	else if (i == 1)
-		ft_puterror("error: Dynamic memory allocation failed.");
-	else if (i == 2)
-		ft_puterror("error: The imput file is not valid.");
+	(void)x;
+	(void)y;
+	(void)button;
+	(void)e;
+	return (0);
+}
+
+int			mouse_move(int x, int y, t_env *e)
+{
+	(void)x;
+	(void)y;
+	(void)e;
 	return (0);
 }
