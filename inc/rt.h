@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 19:18:31 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/06/26 23:53:18 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/06/27 16:13:59 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,20 @@
 # include "../minilibx/includes/mlx.h"
 # include "macros.h"
 
+typedef struct		s_vect
+{
+	float	x;
+	float	y;
+	float	z;
+}					t_vect;
+
 typedef struct		s_env
 {
 	void	*mlx;
 	void	*win;
-	void	*ptr_img;
+	void	*img;
 	int		*img_data;
-	void	*ptr_menu;
+	void	*menu;
 	int		*menu_data;
 	int		image_w;
 	int		image_h;
@@ -31,9 +38,15 @@ typedef struct		s_env
 	int		bpp;
 	int		size_line;
 	int		endian;
+
+	char	*scene;
 }					t_env;
 
-void	ft_error(int i);
+int		ft_error(int i);
+int		kill_program(void);
 void	init(t_env *e);
+int		mouse_hook(int button, int x, int y, t_env *e);
+int		key_hook(int key, t_env *env);
+int		mouse_move(int x, int y, t_env *e);
 
 #endif
