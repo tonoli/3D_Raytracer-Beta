@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/27 15:01:51 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/06/27 15:12:06 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/06/28 23:49:44 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int			key_hook(int key, t_env *env)
 {
-	(void)key;
+	if (key == ESC_KEY)
+		kill_program();
 	(void)env;
 	return (0);
 }
