@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 18:55:20 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/06/26 22:28:00 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/07/02 22:27:36 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,4 +101,5 @@ int				ft_isupper(int c);
 void			ft_lstadd_back(t_list **alst, t_list *lst);
 size_t			ft_lstsize(t_list *lst);
 char			*ft_join(char const *s1, char const *s2);
+void			ft_swap(int *a, int *b);
 #endif

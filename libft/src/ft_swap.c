@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/26 23:21:45 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/07/02 22:55:10 by itonoli-         ###   ########.fr       */
+/*   Created: 2017/07/02 22:26:29 by itonoli-          #+#    #+#             */
+/*   Updated: 2017/07/02 22:26:59 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
-
-int		kill_program(void)
+void ft_swap(int *a, int *b)
 {
-	exit(0);
-	return (0);
-}
+	int tmp;
 
-int		ft_error(int i)
-{
-	if (i == 0)
-		ft_puterror("Usage : ./rtv1 <scene>");
-	else if (i == 1)
-		ft_puterror("error: Dynamic memory allocation failed.");
-	else if (i == 2)
-		ft_puterror("error: The imput file is not valid.");
-	return (0);
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
