@@ -1,5 +1,7 @@
 # RTv1
-The hole purpose of this project is to learn and implement the basics of ray tracing to pave the way for the final year project RT. 
+The purpose of this project is to learn and implement the basics of ray tracing to pave the way for the final year project RT.
+
+<p align="center"><img src="https://pbs.twimg.com/media/DDGqIf5U0AAqYTW.jpg:large"></p>
  
 ## What is Ray tracing? 
  
