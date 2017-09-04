@@ -6,7 +6,7 @@
 #    By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/26 17:44:42 by itonoli-          #+#    #+#              #
-#    Updated: 2017/06/27 15:14:14 by itonoli-         ###   ########.fr        #
+#    Updated: 2017/09/04 08:38:25 by itonoli-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC_NAME = main.c \
 error.c \
 hooks.c \
 init.c \
+rays.c \
 
 
 OBJ_NAME = $(SRC_NAME:.c=.o)

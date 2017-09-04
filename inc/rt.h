@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 19:18:31 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/06/27 16:13:59 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/04 11:51:54 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ typedef struct		s_vect
 	float	y;
 	float	z;
 }					t_vect;
+
+
 
 typedef struct		s_env
 {
