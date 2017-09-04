@@ -6,13 +6,13 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/02 22:20:40 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/04 13:56:59 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/04 15:53:25 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/rt.h"
 
-int solveQuadratic(const float a, const float b, const float c, float x0, float x1)
+int solve_quadratic(const float a, const float b, const float c, float x0, float x1)
 {
 	float	discr;
 	float	tmp;
@@ -41,12 +41,18 @@ int solveQuadratic(const float a, const float b, const float c, float x0, float 
 	return (1);
 }
 
-float	dotProduct(t_vect a, t_vect b)
+float	dot_product(t_vect a, t_vect b)
 {
 	return (a.x * b.x + a.y * b.y + a.z * b.z);
 }
 
-int	intersect(t_env *e)
+float	cross_product(t_vect a, t_vect b)
+{
+	t_vect	 
+	return (
+}
+
+int		intersect(t_env *e)
 {
 	t_vect l;
 
