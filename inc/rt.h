@@ -27,7 +27,12 @@ typedef struct		s_vect
 typedef struct		s_obj
 {
 	char	id;
-	float	position;
+	float	dist;
+	float	h1;
+	float h2;
+	float	h;
+	t_vect	hit;
+
 	s_obj	*next;
 }					t_obj;
 
