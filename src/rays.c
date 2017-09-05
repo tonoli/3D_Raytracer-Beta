@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/02 22:20:40 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/04 15:53:25 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/05 13:01:20 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,17 @@ float	cross_product(t_vect a, t_vect b)
 	return (
 }
 
+
+/*
+ * Now if need to build a function that will return 1 if the ray intersects an
+ * object or 0 if not then thanks to that we will clor or black pixel
+ */
+
 int		intersect(t_env *e)
 {
 	t_vect l;
 
 	l = e->orign - center;
-	e->a =
 	if (!(solveQuadratic(e->a, e->b, e->c, e->t0, e->t1)))
 		return (0);
 

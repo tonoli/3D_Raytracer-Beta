@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 19:18:31 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/04 15:52:03 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/05 13:01:15 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,13 @@ typedef struct		s_vect
 	float	y;
 	float	z;
 }					t_vect;
+
+typedef struct		s_obj
+{
+	char	id;
+	float	position;
+	s_obj	*next;
+}					t_obj;
 
 typedef struct		s_env
 {
