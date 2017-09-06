@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 19:18:31 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/06 11:36:04 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/06 20:53:50 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,17 @@ typedef struct		s_obj
 	float	h1;
 	float	h2;
 	float	h;
+	float	a;
+	float	b;
+	float	c;
+	float	delta;
+
+	t_vect	o;
 	t_vect	hit;
 
-	s_obj	*next;
+	float	radius;
+
+	struct s_obj *next;
 }					t_obj;
 
 typedef struct		s_env
@@ -53,8 +61,8 @@ typedef struct		s_env
 
 	char	*scene;
 
-	t_vect	camera;
-	t_obj	obj;
+	t_obj	camera;
+	t_obj	*obj;
 }					t_env;
 
 int		ft_error(int i);
