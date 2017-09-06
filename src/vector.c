@@ -1,4 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   vector.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: itonoli- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/06 11:25:07 by itonoli-          #+#    #+#             */
+/*   Updated: 2017/09/06 11:33:01 by itonoli-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "../inc/rt.h"
 
 float		dot_product(t_vect a, t_vect b)
 {
@@ -9,7 +21,9 @@ t_vect		add(t_vect a, t_vect b)
 {
 	t_vect v;
 
-	v = init_vect(a.x + b.x, a.y + b.y, a.z + b.z);
+	v.x = a.x + b.x;
+	v.y = a.y + b.y;
+	v.z = a.z + b.z;
 	return (v);
 }
 
@@ -17,7 +31,9 @@ t_vect		sub(t_vect a, t_vect b)
 {
 	t_vect	v;
 
-	v = init_vect(a.x - b.x, a.y - b.y, a.z - b.z);
+	v.x = a.x - b.x;
+	v.y = a.y - b.y;
+	v.z = a.z - b.z;
 	return (v);
 }
 

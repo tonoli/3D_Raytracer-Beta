@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 23:27:55 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/05 20:10:38 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/06 11:33:20 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,6 @@
 static void init_val(t_env *e) {
 	e->image_w = 0;
 	e->image_h = 0;
-}
-
-t_vect	init_vect(float x, float y, float z)
-{
-	t_vect	vect;
-
-	vect.x = x;
-	vect.y = y;
-	vect.z = z;
-
-	return (vect);
 }
 
 void		init(t_env *e)
