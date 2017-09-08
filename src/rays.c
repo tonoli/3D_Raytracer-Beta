@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/02 22:20:40 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/06 20:57:09 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/08 14:56:23 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	distance(t_env *e, t_obj *obj, t_vect ray)
 	obj->h1 = (-obj->b - sqrt(obj->delta)) / (2.0 * obj->a);
 	obj->h2 = (-obj->b + sqrt(obj->delta)) / (2.0 * obj->a);
 	obj->h = (obj->h1 > obj->h2) ? obj->h2 : obj->h1;
-	obj->hit = v_sum(e->camera.o, v_mult(ray, obj->h));
+	obj->hit = v_add(e->camera.o, v_mult(ray, obj->h));
 	dist = sqrt(dot_product(
 		v_sub(e->camera.o, obj->hit), v_sub(e->camera.o, obj->hit)));
 	obj->dist = dist;

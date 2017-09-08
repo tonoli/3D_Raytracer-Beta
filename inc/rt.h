@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 19:18:31 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/06 20:53:50 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/08 14:55:52 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ typedef struct		s_env
 	t_obj	*obj;
 }					t_env;
 
+float	dot_product(t_vect a, t_vect b);
+t_vect	v_add(t_vect a, t_vect b);
+t_vect	v_sub(t_vect a, t_vect b);
+t_vect	v_power(t_vect a, int n);
+t_vect	v_mult(t_vect a, float t);
 int		ft_error(int i);
 int		kill_program(void);
 void	init(t_env *e);

@@ -6,7 +6,7 @@
 /*   By: itonoli- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 11:25:07 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/06 11:33:01 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/08 14:56:03 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ float		dot_product(t_vect a, t_vect b)
 	return (a.x * b.x + a.y * b.y + a.z * b.z);
 }
 
-t_vect		add(t_vect a, t_vect b)
+t_vect		v_add(t_vect a, t_vect b)
 {
 	t_vect v;
 
@@ -27,7 +27,7 @@ t_vect		add(t_vect a, t_vect b)
 	return (v);
 }
 
-t_vect		sub(t_vect a, t_vect b)
+t_vect		v_sub(t_vect a, t_vect b)
 {
 	t_vect	v;
 
@@ -37,7 +37,7 @@ t_vect		sub(t_vect a, t_vect b)
 	return (v);
 }
 
-t_vect	mult(t_vect a, float t)
+t_vect		v_mult(t_vect a, float t)
 {
 	t_vect	v;
 
@@ -47,7 +47,7 @@ t_vect	mult(t_vect a, float t)
 	return (v);
 }
 
-t_vect	power_v(t_vect a, int n)
+t_vect		v_power(t_vect a, int n)
 {
 	t_vect	v;
 
