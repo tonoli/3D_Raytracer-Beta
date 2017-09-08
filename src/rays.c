@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/02 22:20:40 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/08 14:56:23 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/09/08 15:06:54 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,4 @@ void	sphere_distance(t_env *e, t_vect ray, t_obj *obj)
 int		intersect(t_env *e)
 {
 	// if dist = -1 on ne fait rien else on colorie
-
 }
