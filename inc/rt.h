@@ -54,6 +54,8 @@ typedef struct		s_env
 	int		*menu_data;
 	int		image_w;
 	int		image_h;
+	int		x;
+	int		y;
 
 	int		bpp;
 	int		size_line;
