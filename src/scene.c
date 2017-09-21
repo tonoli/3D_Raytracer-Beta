@@ -21,6 +21,8 @@ t_obj new_obj(int type, float radius, t_vect origin)
 	new->type = type;
 	new->radius = radius;
 	new->origin = origin;
+	new->next = NULL;
+	return (new);
 }
 
 int		scene_selector(t_env *e)
@@ -28,12 +30,14 @@ int		scene_selector(t_env *e)
 	char *scene;
 
 	scene = e->scene;
-	if (ft_strcmp(scene, '1') || ft_strcmp(scene, '2') || ft_strcmp(scene,'3'))
+	if (ft_strcmp(scene, "1") || ft_strcmp(scene, "2") || ft_strcmp(scene,"3"))
 		return (1);
 	else if (scene[0] == '1')
 	{
-		new_obj(SPHERE, 42);
-		v_null(obj->origin);
+		t_vect	origin;
+		t_obj	obj;
+
+		obj = new_obj(SPHERE, 42, v_null(origin));
 		v_null(obj->dir);
 
 	}

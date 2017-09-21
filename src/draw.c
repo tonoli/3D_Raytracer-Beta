@@ -15,7 +15,9 @@
 void	fill_img(t_env *e)
 {
 	t_ray	ray;
-	
+	float	ratio;
+
+	ratio = WIN_W / WIN_H;
 	e->x = -1;
 	while (++e->x < WIN_W)
 	{
@@ -23,6 +25,7 @@ void	fill_img(t_env *e)
 		while (++e->y < WIN_H)
 		{
 			t_vect	v;
+
 			v.x = ((2 * ((e->x + 0.5) / WIN_W)) - 1) * ratio * (tan((60 / 2) * M_PI / 180));
 			v.y = ((1 - (2 * ((e->y + 0.5) / WIN_H))) * tan((60 / 2) * M_PI / 180));
 			v.z = 1
