@@ -12,15 +12,16 @@
 
 #include "../inc/rt.h"
 
-static void init_val(t_env *e) {
+static void init_val(t_env *e)
+{
 	e->image_w = 0;
 	e->image_h = 0;
 }
 
 void		init(t_env *e)
 {
-	if(!scene_selector(e))
-		ft_error(3);
+	if(!(scene_selector(e)))
+		ft_error(SCENE);
 	e->mlx = mlx_init();
 	init_val(e);
 	e->win = mlx_new_win(e->mlx, -1, -1, WIN_W, WIN_H, WIN_NAME);

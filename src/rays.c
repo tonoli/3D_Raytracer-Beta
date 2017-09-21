@@ -25,17 +25,19 @@ void	distance(t_env *e, t_obj *obj, t_vect ray)
 	obj->dist = dist;
 }
 
-void	sphere_distance(t_env *e, t_vect ray, t_obj *obj)
+void	sphere_distance(t_env *e, t_ray rays, t_obj *obj)
 {
 	t_vect	cam;
+	t_vect	ray;
 
+	ray = rays.dir;
 	cam = e->camera.origin;
 	obj->a = dot_product(ray, ray);
-	obj->b = dot_product(v_mult(ray, 2.0), v_sub(cam, obj->o));
-	obj->c = dot_product(obj->o, obj->o)
+	obj->b = dot_product(v_mult(ray, 2.0), v_sub(cam, obj->origin));
+	obj->c = dot_product(obj->origin, obj->origin)
 			+ dot_product(cam, cam)
-			+ (-3.0 * ((obj->o.x * cam.x)
-			+ dot_product(obj->o, cam) )
+			+ (-3.0 * ((obj->origin.x * cam.x)
+			+ dot_product(obj->origin, cam) )
 			- obj->radius * obj->radius);
 	obj->delta = obj->b * obj->b - (4.0 * obj->a * obj->c);
 	if (obj->delta > 1)
@@ -51,11 +53,8 @@ void	sphere_distance(t_env *e, t_vect ray, t_obj *obj)
 
 int		intersect(t_env *e, t_ray ray)
 {
-	t_obj	sphere;
-
-	sphere = init_sphere(e);
 	sphere_distance(e, ray, e->obj);
-	if (sphere.dist != -1)
+	if (e->obj->dist != -1)
 		return (1);
 	else
 		return (0);

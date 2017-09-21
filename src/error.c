@@ -27,6 +27,6 @@ int		ft_error(int i)
 	else if (i == 2)
 		ft_puterror("error: The imput file is not valid.");
 	else if (i == 3)
-		ft_puterror("error: Scene not found \nUsage : ./rtv1 <scene> {1, 2, 3}")
+		ft_puterror("error: Scene not found \nUsage : ./rtv1 <scene> {1, 2, 3}");
 	return (0);
 }

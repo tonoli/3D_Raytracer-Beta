@@ -100,7 +100,7 @@ ft_tablen.c \
 ft_memtab.c \
 ft_power.c \
 ft_strtol.c \
-ft_swap
+ft_swap.c
 
 OBJ_NAME= $(SRC_NAME:.c=.o)
 
