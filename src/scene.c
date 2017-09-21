@@ -22,7 +22,7 @@ t_obj new_obj(int type, float radius, t_vect origin)
 	new->radius = radius;
 	new->origin = origin;
 	new->next = NULL;
-	return (new);
+	return (*new);
 }
 
 int		scene_selector(t_env *e)
@@ -37,8 +37,9 @@ int		scene_selector(t_env *e)
 		t_vect	origin;
 		t_obj	obj;
 
-		obj = new_obj(SPHERE, 42, v_null(origin));
-		v_null(obj->dir);
+		origin = v_null();
+		obj = new_obj(SPHERE, 42, origin);
+		obj.dir = v_null();
 
 	}
 	else if (scene[0] == '2')

@@ -30,6 +30,9 @@ error.c \
 hooks.c \
 init.c \
 rays.c \
+vector.c \
+scene.c \
+draw.c \
 
 
 OBJ_NAME = $(SRC_NAME:.c=.o)

@@ -28,13 +28,13 @@ void	fill_img(t_env *e)
 
 			v.x = ((2 * ((e->x + 0.5) / WIN_W)) - 1) * ratio * (tan((60 / 2) * M_PI / 180));
 			v.y = ((1 - (2 * ((e->y + 0.5) / WIN_H))) * tan((60 / 2) * M_PI / 180));
-			v.z = 1
+			v.z = 1;
 
 			ray.origin = e->camera.origin;
 			ray.dir = v;
 			if (intersect(e, ray))
-				e->img_data[e->y][e->x] = WHITE;
+				e->img_data[e->y * WIN_W + e->x] = WHITE;
 		}
 	}
-	mlx_put_image_to_window(e->mlx, e->win, e->img, 0, 0);
+	mlx_put_img_to_win(e->mlx, e->win, e->img, 0, 0);
 }
