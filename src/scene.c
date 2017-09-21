@@ -12,6 +12,17 @@
 
 #include "../inc/rt.h"
 
+t_obj new_obj(int type, float radius, t_vect origin)
+{
+	t_obj *new;
+
+	if (!(new = (t_obj *)malloc(sizeof(t_obj))))
+		ft_error(MALLOC);
+	new->type = type;
+	new->radius = radius;
+	new->origin = origin;
+}
+
 int		scene_selector(t_env *e)
 {
 	char *scene;
@@ -21,7 +32,7 @@ int		scene_selector(t_env *e)
 		return (1);
 	else if (scene[0] == '1')
 	{
-		new_obj(sphere, 42);
+		new_obj(SPHERE, 42);
 		v_null(obj->origin);
 		v_null(obj->dir);
 
