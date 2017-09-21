@@ -56,3 +56,15 @@ t_vect		v_power(t_vect a, int n)
 	v.z = pow(a.z, n);
 	return (v);
 }
+
+t_vect	v_null(t_vect *a)
+{
+	a.x = 0;
+	a.y = 0;
+	a.z = 0;
+}
+
+void	print_vector(t_vect v)
+{
+	printf("[%f][%f][%f]\n", v.x, v.y, v.z);
+}

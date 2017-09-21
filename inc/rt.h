@@ -24,9 +24,15 @@ typedef struct		s_vect
 	float	z;
 }					t_vect;
 
+typedef struct		s_ray
+{
+	t_vect dir;
+	t_vect origin;
+}									t_ray;
+
 typedef struct		s_obj
 {
-	char	id;
+	int		type;
 	float	dist;
 	float	h1;
 	float	h2;
@@ -36,13 +42,14 @@ typedef struct		s_obj
 	float	c;
 	float	delta;
 
-	t_vect	o;
+	t_vect	origin;
+	t_vect	dir;
 	t_vect	hit;
 
 	float	radius;
 
 	struct s_obj *next;
-}					t_obj;
+}									t_obj;
 
 typedef struct		s_env
 {
@@ -65,7 +72,7 @@ typedef struct		s_env
 
 	t_obj	camera;
 	t_obj	*obj;
-}					t_env;
+}									t_env;
 
 float	dot_product(t_vect a, t_vect b);
 t_vect	v_add(t_vect a, t_vect b);

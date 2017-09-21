@@ -38,6 +38,12 @@
 # define V			9
 # define R			15
 
+# define SPHERE 1
+# define CONE 2
+# define CYLINDRE 3
+# define PLAN 4
+# define LUMIERE 5
+
 # define LIGHTBLUE	0x4FC3F7
 # define WHITE		0xFFFFFF
 # define RED		0xF44336

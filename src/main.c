@@ -23,8 +23,8 @@ int		main(int ac, char **av)
 	e->scene = av[1];
 	init(e);
 
-	mlx_hook(e->win, 6, (1L << 6), mouse_move, e);
-	mlx_hook(e->win, 17, (1L << 17), kill_program, e);
+	mlx_hook(e->win, 6, 0, mouse_move, e);
+	mlx_hook(e->win, 17, 0, kill_program, e);
 	mlx_mouse_hook(e->win, mouse_hook, e);
 	mlx_key_hook(e->win, key_hook, e);
 	mlx_loop(e->mlx);

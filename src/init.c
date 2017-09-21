@@ -19,6 +19,8 @@ static void init_val(t_env *e) {
 
 void		init(t_env *e)
 {
+	if(!scene_selector(e))
+		ft_error(3);
 	e->mlx = mlx_init();
 	init_val(e);
 	e->win = mlx_new_win(e->mlx, -1, -1, WIN_W, WIN_H, WIN_NAME);
