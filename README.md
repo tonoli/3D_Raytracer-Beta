@@ -13,7 +13,7 @@ You get it? Easy right? Thank you Wikipedia! Let's take a look at the figure bel
 
 ## How to start? 
 
-The basic retracer we will build need to be able to render 4 types of structures, planes, spheres, cones and cylanders. Here are the differents formulas we will need for the project. 
+The basic retracer we will build need to be able to render 4 types of structures, planes, spheres, cones and cylanders. Here are the differents formulas we will need for the project. The fillowing has been created by my awesome teamate for the RT project Nicolas Sampre, nsampre's credit for the rest of README! Awesome job!
 
 ### Ray Tracing Formulas ✖️➕➖➗
 
