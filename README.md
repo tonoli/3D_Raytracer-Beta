@@ -13,9 +13,9 @@ You get it? Easy right? Thank you Wikipedia! Let's take a look at the figure bel
 
 ### How to start? 
 
-We are going to start to render a sphere without light and any texture and then add more and more details. 
+The basic retracer we will build need to be able to render 4 types of structures, planes, spheres, cones and cylanders. Here are the differents formulas we will need for the project. 
 
-# Ray Tracing Formulas ✖️➕➖➗
+### Ray Tracing Formulas ✖️➕➖➗
 
 ## Tips 👈
 When you compute delta, chose the > 0 case (< 0 meaning no intersection, = 0 meaning one intersection)
