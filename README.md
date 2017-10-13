@@ -11,19 +11,19 @@ You get it? Easy right? Thank you Wikipedia! Let's take a look at the figure bel
 
 <p align="center"><img src="https://user-images.githubusercontent.com/17257576/27506227-2c3803e8-5869-11e7-9659-9f0cfc89ebfe.png" width="400"></p>
 
-### How to start? 
+## How to start? 
 
 The basic retracer we will build need to be able to render 4 types of structures, planes, spheres, cones and cylanders. Here are the differents formulas we will need for the project. 
 
 ### Ray Tracing Formulas ✖️➕➖➗
 
-## Tips 👈
+### Tips 👈
 When you compute delta, chose the > 0 case (< 0 meaning no intersection, = 0 meaning one intersection)
 When you find an intersection solution t, t1 or t2, chose :
 - The positive solution (< 0 means behind the origin point)
 - The min solution (closer to origin point)
 
-## How did I get those magic formulas ? Am I a mathematician ? Am I a scientist ? Am I a genius ? Hell NO ! I'm a.. GOOGLER ! 👽
+### How did I get those magic formulas ? Am I a mathematician ? Am I a scientist ? Am I a genius ? Hell NO ! I'm a.. GOOGLER ! 👽
 
 Some Ray Tracing explainations :
 - https://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-generating-camera-rays/generating-camera-rays
