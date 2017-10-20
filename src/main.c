@@ -17,9 +17,9 @@ int		main(int ac, char **av)
 	t_env	*e;
 
 	if (!(e = (t_env *)malloc(sizeof(t_env))))
-		return (ft_error(1));
+		return (ft_error(MALLOC));
 	if (ac != 2)
-		return (ft_error(0));
+		return (ft_error(ARGV));
 	e->scene = av[1];
 	init(e);
 

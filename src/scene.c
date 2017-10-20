@@ -25,30 +25,37 @@ t_obj new_obj(int type, float radius, t_vect origin)
 	return (*new);
 }
 
+/*
+** Definition of scenes and where you can change values to test
+*/
+
+void scene1(t_env *e)
+{
+
+}
+
+void scene2(t_env *e)
+{
+
+}
+
+void scene3(t_env *e)
+{
+
+}
+
 int		scene_selector(t_env *e)
 {
 	char *scene;
 
 	scene = e->scene;
-	if (ft_strcmp(scene, "1") || ft_strcmp(scene, "2") || ft_strcmp(scene,"3"))
-		return (1);
-	else if (scene[0] == '1')
-	{
-		t_vect	origin;
-		t_obj	obj;
-
-		origin = v_null();
-		obj = new_obj(SPHERE, 42, origin);
-		obj.dir = v_null();
-
-	}
-	else if (scene[0] == '2')
-	{
-		// render sphere + cone + cilindre
-	}
+	if (ft_strcmp(scene, "1") == 0)
+		scene1(e);
+	else if (ft_strcmp(scene, "2") == 0)
+		scene2(e);
+	else if (ft_strcmp(scene, "3") == 0)
+		scene3(e);
 	else
-	{
-		// render pilers lumieres multiples complexte
-	}
+		return(1);
 	return (0);
 }

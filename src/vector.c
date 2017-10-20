@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "../inc/rt.h"
-// There is a printf in the file
-#include <stdio.h>
 
 float		dot_product(t_vect a, t_vect b)
 {
@@ -67,9 +65,4 @@ t_vect v_null(void)
 	a.y = 0;
 	a.z = 0;
 	return (a);
-}
-
-void	print_vector(t_vect v)
-{
-	printf("[%f][%f][%f]\n", v.x, v.y, v.z);
 }
