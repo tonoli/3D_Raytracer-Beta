@@ -12,21 +12,50 @@
 
 #include "../inc/rt.h"
 
-int		selector(char *scene)
+t_obj new_obj(int type, float radius, t_vect origin)
 {
-	if (ft_strcmp(scene, '1') || ft_strcmp(scene, '2') || ft_strcmp(scene,'3'))
-		return (1);
-	else if (scene[0] == '1')
-	{
-		//render sphere
-	}
-	else if (scene[0] == '2')
-	{
-		// render sphere + cone + cilindre
-	}
+	t_obj *new;
+
+	if (!(new = (t_obj *)malloc(sizeof(t_obj))))
+		ft_error(MALLOC);
+	new->type = type;
+	new->radius = radius;
+	new->origin = origin;
+	new->next = NULL;
+	return (*new);
+}
+
+/*
+** Definition of scenes and where you can change values to test
+*/
+
+void scene1(t_env *e)
+{
+
+}
+
+void scene2(t_env *e)
+{
+
+}
+
+void scene3(t_env *e)
+{
+
+}
+
+int		scene_selector(t_env *e)
+{
+	char *scene;
+
+	scene = e->scene;
+	if (ft_strcmp(scene, "1") == 0)
+		scene1(e);
+	else if (ft_strcmp(scene, "2") == 0)
+		scene2(e);
+	else if (ft_strcmp(scene, "3") == 0)
+		scene3(e);
 	else
-	{
-		// render pilers lumieres multiples complexte
-	}
+		return(1);
 	return (0);
 }

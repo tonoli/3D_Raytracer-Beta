@@ -13,10 +13,18 @@
 #ifndef MACROS_H
 # define MACROS_H
 
+/*
+** MLX window
+*/
+
 # define WIN_NAME	"RTv1 itonoli"
 # define WIN_W		1280
 # define WIN_H		720
 # define MENU_W		60
+
+/*
+** Keyboard keys
+*/
 
 # define UP			126
 # define DOWN		125
@@ -37,6 +45,29 @@
 # define C			8
 # define V			9
 # define R			15
+
+/*
+** Errors
+*/
+
+# define ARGV 0
+# define MALLOC 1
+# define INPUT 2
+# define SCENE 3
+
+/*
+** Types of objects
+*/
+
+# define SPHERE 1
+# define CONE 2
+# define CYLINDRE 3
+# define PLAN 4
+# define LUMIERE 5
+
+/*
+** Colors
+*/
 
 # define LIGHTBLUE	0x4FC3F7
 # define WHITE		0xFFFFFF

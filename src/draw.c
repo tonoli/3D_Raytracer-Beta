@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/12 23:53:00 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/03 19:04:06 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/03 19:07:39 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ void	fill_img(t_env *e)
       e->img_data[e->y][e->x] = color;
     }
 	}
-	mlx_put_image_to_window(e->mlx, e->win, e->img, 0, 0);
+	mlx_put_img_to_win(e->mlx, e->win, e->img, 0, 0);
 }

@@ -56,3 +56,13 @@ t_vect		v_power(t_vect a, int n)
 	v.z = pow(a.z, n);
 	return (v);
 }
+
+t_vect v_null(void)
+{
+	t_vect a;
+
+	a.x = 0;
+	a.y = 0;
+	a.z = 0;
+	return (a);
+}

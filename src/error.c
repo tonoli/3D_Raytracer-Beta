@@ -21,10 +21,12 @@ int		kill_program(void)
 int		ft_error(int i)
 {
 	if (i == 0)
-		ft_puterror("Usage : ./rtv1 <scene>");
+		ft_puterror("Usage : ./rtv1 <scene> {1, 2, 3}");
 	else if (i == 1)
 		ft_puterror("error: Dynamic memory allocation failed.");
 	else if (i == 2)
 		ft_puterror("error: The imput file is not valid.");
+	else if (i == 3)
+		ft_puterror("error: Scene not found \nUsage : ./rtv1 <scene> {1, 2, 3}");
 	return (0);
 }
