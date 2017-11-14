@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 22:27:43 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/06/27 00:03:37 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/05 21:35:39 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@
 
 # define LIGHTBLUE	0x4FC3F7
 # define WHITE		0xFFFFFF
-# define RED		0xF44336
+# define RED		0xFF0000
 # define GREEN		0x4CAF50
 # define ORANGE		0xFB8C00
 # define GREY		0x757575
