@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 19:17:50 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/07/02 22:50:45 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/05 18:13:07 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		main(int ac, char **av)
 		return (ft_error(ARGV));
 	e->scene = av[1];
 	init(e);
-
+	draw(e);
 	mlx_hook(e->win, 6, 0, mouse_move, e);
 	mlx_hook(e->win, 17, 0, kill_program, e);
 	mlx_mouse_hook(e->win, mouse_hook, e);
