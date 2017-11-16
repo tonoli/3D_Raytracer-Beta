@@ -6,7 +6,7 @@
 #    By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/26 17:44:42 by itonoli-          #+#    #+#              #
-#    Updated: 2017/09/04 08:38:25 by itonoli-         ###   ########.fr        #
+#    Updated: 2017/11/16 14:38:20 by itonoli-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,9 @@ rays.c \
 vector.c \
 scene.c \
 draw.c \
+drawgui.c \
+addbox.c \
+leftbar.c \
 
 
 OBJ_NAME = $(SRC_NAME:.c=.o)

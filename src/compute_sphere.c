@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/05 18:11:48 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/06 20:27:15 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/16 14:38:34 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	sphere_distance(t_env *e, t_obj *obj, t_ray ray)
 		obj->cross_distance = -1;
 }
 
-int compute(t_env *e, t_ray ray)
-{
-
-}
+// int compute(t_env *e, t_ray ray)
+// {
+//
+// }

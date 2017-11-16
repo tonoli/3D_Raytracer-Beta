@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/12 23:53:00 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/06 20:20:21 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/16 15:56:05 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	get_color(int color, double coef)
 void	draw(t_env *e)
 {
 	int color;
-	double ratio;
-	t_vect v;
-	t_ray	ray;
+	//double ratio;
+	// t_vect v;
+	// t_ray	ray;
 
 	e->x = -1;
 	while (++e->x < WIN_W)
@@ -38,15 +38,17 @@ void	draw(t_env *e)
     e->y = -1;
     while (++e->y < WIN_H)
     {
-			ratio = WIN_W / WIN_H;
-			v.x = ((2 * ((e->x + 0.5) / WIN_W)) - 1) * ratio * (tan((60 / 2) * PI / 180));
-			v.y = ((1 - (2 * ((e->y + 0.5) / WIN_H))) * tan((60 / 2) * PI / 180));
-			v.z = 1;
-			ray.dir = v;
-			ray.origin = e->camera.origin;
-			color = compute(e, ray);
-      e->img_data[e->y][e->x] = color;
+			//ratio = WIN_W / WIN_H;
+			//v.x = ((2 * ((e->x + 0.5) / WIN_W)) - 1) * ratio * (tan((60 / 2) * PI / 180));
+			//v.y = ((1 - (2 * ((e->y + 0.5) / WIN_H))) * tan((60 / 2) * PI / 180));
+			//v.z = 1;
+			//ray.dir = v;
+			//ray.origin = e->camera.origin;
+			//color = compute(e, ray);
+			color = RED;
+      e->img_data[e->y * WIN_W + e->x] = color;
     }
 	}
 	mlx_put_img_to_win(e->mlx, e->win, e->img, 0, 0);
+	draw_gui(e);
 }

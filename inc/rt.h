@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 19:18:31 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/06 20:29:04 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/16 15:53:28 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 # include "../libft/inc/libft.h"
 # include "../minilibx/includes/mlx.h"
+// # include "libft.h"
+// # include "mlx.h"
 # include "macros.h"
+# include "stdio.h"
 
 /*
 ** Define
@@ -64,8 +67,8 @@ typedef struct		s_env
 	void	*win;
 	void	*img;
 	int		*img_data;
-	void	*menu;
-	int		*menu_data;
+	void	*gui;
+	int		*gui_data;
 	int		image_w;
 	int		image_h;
 	int		x;
@@ -87,12 +90,14 @@ t_vect	v_sub(t_vect a, t_vect b);
 t_vect	v_power(t_vect a, int n);
 t_vect	v_mult(t_vect a, float t);
 t_vect	v_null(void);
-t_vect	v_factor(t_vect a, double factor, t_vect b)
+t_vect	v_factor(t_vect a, double factor, t_vect b);
 double	v_magnitude(t_vect v);
 t_vect	vector_normalize(t_vect a);
 int		intersect(t_env *e, t_ray ray);
 int		scene_selector(t_env *e);
 void	draw(t_env *e);
+void 	draw_gui(t_env *e);
+void createbox(t_env *e, int size, int height);
 int		ft_error(int i);
 int		kill_program(void);
 void	init(t_env *e);

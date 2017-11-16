@@ -6,7 +6,7 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/02 22:20:40 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/08 16:46:41 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/16 14:28:35 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ void	sphere_distance(t_env *e, t_ray rays, t_obj *obj)
 
 int		intersect(t_env *e, t_ray ray)
 {
-	sphere_distance(e, ray, e->obj);
-	if (e->obj->dist != -1)
+	sphere_distance(e, ray, e->objects);
+	if (e->objects->dist != -1)
 		return (1);
 	else
 		return (0);
