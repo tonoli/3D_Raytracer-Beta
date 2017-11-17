@@ -6,17 +6,16 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 19:18:31 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/16 15:53:28 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/16 19:05:03 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RT_H
 # define RT_H
 
+
 # include "../libft/inc/libft.h"
 # include "../minilibx/includes/mlx.h"
-// # include "libft.h"
-// # include "mlx.h"
 # include "macros.h"
 # include "stdio.h"
 

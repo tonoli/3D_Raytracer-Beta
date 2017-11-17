@@ -6,7 +6,7 @@
 #    By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/26 17:44:42 by itonoli-          #+#    #+#              #
-#    Updated: 2017/11/16 14:38:20 by itonoli-         ###   ########.fr        #
+#    Updated: 2017/11/16 17:44:09 by itonoli-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ CC = gcc
 FLAGS = -Wall -Wextra -Werror -I.inc
 
 #LIBRARY
-LIBFT  = -L./libft -lft
+LIBFT  = -L./libft -lft -I libft/inc/
 MLX = -L./minilibx -lmlx -framework OpenGL -framework AppKit
 
 

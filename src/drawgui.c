@@ -6,13 +6,13 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 14:09:16 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/16 15:56:44 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/16 17:39:49 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/rt.h"
 
-void			new_menu(t_env *e, int size, int height)
+void			new_box(t_env *e, int size, int height)
 {
 	int	bpp;
 	int	size_line;
@@ -26,6 +26,6 @@ void			new_menu(t_env *e, int size, int height)
 
 void draw_gui(t_env *e)
 {
-  new_menu(e, 100, 200);
+  new_box(e, 100, 200);
 	mlx_put_img_to_win(e->mlx, e->win, e->gui, 100, 100);
 }
