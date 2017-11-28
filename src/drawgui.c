@@ -6,11 +6,11 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 14:09:16 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/16 17:39:49 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/28 02:11:32 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
+#include "rt.h"
 
 void			new_box(t_env *e, int size, int height)
 {

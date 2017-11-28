@@ -6,11 +6,11 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/27 15:01:51 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/09/04 11:51:49 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/28 02:11:41 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
+#include "rt.h"
 
 int			key_hook(int key, t_env *env)
 {

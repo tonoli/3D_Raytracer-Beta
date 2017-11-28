@@ -6,11 +6,11 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/12 23:53:00 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/16 15:56:05 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/28 02:11:29 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
+#include "rt.h"
 
 int	get_color(int color, double coef)
 {

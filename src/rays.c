@@ -6,11 +6,11 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/02 22:20:40 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/16 14:28:35 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/28 02:11:56 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
+#include "rt.h"
 
 void	distance(t_env *e, t_obj *obj, t_vect ray)
 {

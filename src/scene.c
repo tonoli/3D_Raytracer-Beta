@@ -6,11 +6,11 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/04 11:52:23 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/16 14:48:37 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/28 02:12:00 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
+#include "rt.h"
 
 // t_obj new_obj(int type, float radius, t_vect origin)
 // {

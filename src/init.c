@@ -6,11 +6,11 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 23:27:55 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/16 15:42:42 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/28 02:11:44 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
+#include "rt.h"
 
 void		init(t_env *e)
 {

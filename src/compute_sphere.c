@@ -6,11 +6,11 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/05 18:11:48 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/16 14:38:34 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/28 02:11:22 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
+#include "rt.h"
 
 void	sphere_intersection_distance(t_env *e, t_obj *obj, t_ray ray)
 {

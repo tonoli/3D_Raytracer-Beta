@@ -6,11 +6,11 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 11:25:07 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/11/07 20:41:24 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/28 02:12:04 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
+#include "rt.h"
 
 float		dot_product(t_vect a, t_vect b)
 {

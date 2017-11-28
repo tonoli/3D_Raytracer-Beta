@@ -6,11 +6,11 @@
 /*   By: itonoli- <itonoli-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/26 23:21:45 by itonoli-          #+#    #+#             */
-/*   Updated: 2017/07/02 22:55:10 by itonoli-         ###   ########.fr       */
+/*   Updated: 2017/11/28 02:11:36 by itonoli-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/rt.h"
+#include "rt.h"
 
 int		kill_program(void)
 {
